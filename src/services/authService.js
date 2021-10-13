@@ -29,11 +29,10 @@ class AuthService {
       email,
       password
     });
-    console.log('test');
   }
 
   getCurrentUser() {
-    return localStorage.getItem("user");
+    return JSON.parse(localStorage.getItem("user"));
   }
 }
 

@@ -7,12 +7,12 @@ function Profile() {
     setUser(() => ({
       ...authService.getCurrentUser()
     }));
-
     console.log(authService.getCurrentUser());
   }
 
   return (
     <div>
+      {user.csrfToken}
       <button onClick={getUser}>get current user</button>
     </div>
   )
